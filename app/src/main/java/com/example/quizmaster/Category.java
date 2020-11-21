@@ -1,9 +1,9 @@
 package com.example.quizmaster;
 
 public class Category {
-    public static final int PROGRAMMING = 1;
-    public static final int GEOGRAPHY = 2;
-    public static final int MATH = 3;
+    public static final int DBMS = 1;
+    public static final int COMPUTER_NETWORKS = 2;
+    public static final int OPERATING_SYSTEMS = 3;
 
     private int id;
     private String name;

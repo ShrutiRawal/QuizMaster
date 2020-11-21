@@ -76,11 +76,11 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillCategoriesTable() {
-        Category c1 = new Category("Programming");
+        Category c1 = new Category("DBMS");
         insertCategory(c1);
-        Category c2 = new Category("Geography");
+        Category c2 = new Category("Computer Networks");
         insertCategory(c2);
-        Category c3 = new Category("Math");
+        Category c3 = new Category("Operating System");
         insertCategory(c3);
     }
 
@@ -104,21 +104,21 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     }
 
     private void fillQuestionsTable() {
-        Question q1 = new Question("Which of the following is a programming language?",
-                "C++", "Hindi", "Chinese", 1,
-                Question.DIFFICULTY_EASY, Category.PROGRAMMING);
+        Question q1 = new Question("____ uniquely identifies each record in the table.",
+                "Primary Key", "Foreign Key", "Super Key", 1,
+                Question.DIFFICULTY_EASY, Category.DBMS);
         insertQuestion(q1);
-        Question q2 = new Question("What is the name of capital of China?",
-                "Abio", "Beijing", "Xaiohing", 2,
-                Question.DIFFICULTY_MEDIUM, Category.GEOGRAPHY);
+        Question q2 = new Question("The location of a resource on the internet is given by?",
+                "Protocol", "URL", "E-Mail address", 2,
+                Question.DIFFICULTY_EASY, Category.COMPUTER_NETWORKS);
         insertQuestion(q2);
-        Question q3 = new Question("What is the sum of probablities of all possible events in a sample space?",
-                "Uncertain", "0", "1", 3,
-                Question.DIFFICULTY_HARD, Category.MATH);
+        Question q3 = new Question("Which of the following is not an operating system?",
+                "Windows", "Linux", "Oracle", 3,
+                Question.DIFFICULTY_EASY, Category.OPERATING_SYSTEMS);
         insertQuestion(q3);
-        Question q4 = new Question("2+2=?",
-                "4", "8", "16", 1,
-                Question.DIFFICULTY_EASY, Category.MATH);
+        Question q4 = new Question("When does page fault occur?",
+                "The page is not present in memory", "The page is present in memory", "Page Buffering occured", 1,
+                Question.DIFFICULTY_EASY, Category.OPERATING_SYSTEMS);
         insertQuestion(q4);
         Question q5 = new Question("Non existing, Easy: A is correct",
                 "A", "B", "C", 1,
@@ -128,26 +128,62 @@ public class QuizDbHelper extends SQLiteOpenHelper {
                 "A", "B", "C", 2,
                 Question.DIFFICULTY_MEDIUM, 5);
         insertQuestion(q6);
-        Question q7 = new Question("Which of the following states of India have alluvial soil?",
-                "Uttar Pradesh","Rajasthan","Maharashtra",1,
-                Question.DIFFICULTY_EASY,Category.GEOGRAPHY);
+        Question q7 = new Question("HTTP stands for?",
+                "Hypertext transfer protocol","Hypertext tracing protocol","Hypertext transfer program",1,
+                Question.DIFFICULTY_EASY,Category.COMPUTER_NETWORKS);
         insertQuestion(q7);
-        Question q8 = new Question("Which of the following is an object-oriented language?",
-                "C++","C","Ruby",1,
-                Question.DIFFICULTY_MEDIUM,Category.PROGRAMMING);
+        Question q8 = new Question("Which of the following enables us to view data from a table based on a specific criterion?",
+                "Macro","Query","Form",2,
+                Question.DIFFICULTY_EASY,Category.DBMS);
         insertQuestion(q8);
-        Question q9 = new Question("Probablity of an event can never be -",
-                "less than 1","equal to 1","greater than 1",3,
-                Question.DIFFICULTY_MEDIUM,Category.MATH);
+        Question q9 = new Question("The overall description of a database is called______.",
+                "Database definition","Data integrity","Database schema",3,
+                Question.DIFFICULTY_MEDIUM,Category.DBMS);
         insertQuestion(q9);
-        Question q10 = new Question("Which of the following is not a feature of object-oriented programming language only?",
-                "Polymorphism","Objects","No data hiding",3,
-                Question.DIFFICULTY_HARD,Category.PROGRAMMING);
+        Question q10 = new Question("A data dictionary is a repository that manages _____.",
+                "Memory","Metadata","Data Validator",2,
+                Question.DIFFICULTY_MEDIUM,Category.DBMS);
         insertQuestion(q10);
-        Question q11 = new Question("Which  of the following cities is called The Pink City of India?",
-                "Raipur","Jaipur","Bhopal",2,
-                Question.DIFFICULTY_HARD,Category.GEOGRAPHY);
+        Question q11 = new Question("Which software prevents the unauthorized access to a system?",
+                "Router","Firewall","Gateway",2,
+                Question.DIFFICULTY_MEDIUM,Category.COMPUTER_NETWORKS);
         insertQuestion(q11);
+        Question q12 = new Question("The maximum length (in bytes) of an IPv4 datagram is?",
+                "65535","32","512",1,
+                Question.DIFFICULTY_MEDIUM,Category.COMPUTER_NETWORKS);
+        insertQuestion(q12);
+        Question q13 = new Question("Banker's algorithm is used to ?",
+                "prevent deadlock","recover from deadlock","None of these",1,
+                Question.DIFFICULTY_MEDIUM,Category.OPERATING_SYSTEMS);
+        insertQuestion(q13);
+        Question q14 = new Question("If the page size increases, the internal fragmentation ______",
+                "remain constant","Decreases","Increases",3,
+                Question.DIFFICULTY_MEDIUM,Category.OPERATING_SYSTEMS);
+        insertQuestion(q14);
+        Question q15 = new Question(" Entity is a _________",
+                "Thing in real world","Object of relation","Present working model",1,
+                Question.DIFFICULTY_HARD,Category.DBMS);
+        insertQuestion(q15);
+        Question q16 = new Question("In an E-R diagram, weak entity set is represented as - ",
+                "Underline","Double line","Double diamond",3,
+                Question.DIFFICULTY_HARD,Category.DBMS);
+        insertQuestion(q16);
+        Question q17 = new Question("Parity bits are used for?",
+                "Encryption of data","Identifying users","Detecting errors",3,
+                Question.DIFFICULTY_HARD,Category.COMPUTER_NETWORKS);
+        insertQuestion(q17);
+        Question q18 = new Question("IANA stands for?",
+                "Internal Associative Numbers Authority","Internet Assigned Numbers Authority","Internal Assigned Numbers Authority",2,
+                Question.DIFFICULTY_HARD,Category.COMPUTER_NETWORKS);
+        insertQuestion(q18);
+        Question q19 = new Question("Thrashing occurs when ________. ",
+                "excessive swapping takes place ","deadlock occurs ","no swapping takes place",1,
+                Question.DIFFICULTY_HARD,Category.OPERATING_SYSTEMS);
+        insertQuestion(q19);
+        Question q20 = new Question("The address generated by the CPU is referred to as ______",
+                "Physical address","Logical address","None of these",2,
+                Question.DIFFICULTY_HARD,Category.OPERATING_SYSTEMS);
+        insertQuestion(q20);
     }
 
     public void addQuestion(Question question) {
